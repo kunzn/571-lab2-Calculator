@@ -21,16 +21,25 @@ public class MainActivity extends AppCompatActivity {
         EditText editNum1 = (EditText) findViewById(R.id.editNum1);
         EditText editNum2 = (EditText) findViewById(R.id.editNum2);
 
-        int num1 = Integer.valueOf(String.valueOf(editNum1.getText()));
-        int num2 = Integer.valueOf(String.valueOf(editNum2.getText()));
+        if (editNum1.getText().toString().trim().length() == 0 || editNum2.getText().toString().trim().length() == 0) {
+            goToActivity("Error: Empty Input Value");
+            return;
+        }
+            int num1 = Integer.valueOf(String.valueOf(editNum1.getText()));
+            int num2 = Integer.valueOf(String.valueOf(editNum2.getText()));
 
-        int total = num1 + num2;
-        goToActivity(String.valueOf(total));
+            int total = num1 + num2;
+            goToActivity(String.valueOf(total));
     }
 
     public void subtract(View view){
         EditText editNum1 = (EditText) findViewById(R.id.editNum1);
         EditText editNum2 = (EditText) findViewById(R.id.editNum2);
+
+        if (editNum1.getText().toString().trim().length() == 0 || editNum2.getText().toString().trim().length() == 0) {
+            goToActivity("Error: Empty Input Value");
+            return;
+        }
 
         int num1 = Integer.valueOf(String.valueOf(editNum1.getText()));
         int num2 = Integer.valueOf(String.valueOf(editNum2.getText()));
@@ -43,6 +52,11 @@ public class MainActivity extends AppCompatActivity {
         EditText editNum1 = (EditText) findViewById(R.id.editNum1);
         EditText editNum2 = (EditText) findViewById(R.id.editNum2);
 
+        if (editNum1.getText().toString().trim().length() == 0 || editNum2.getText().toString().trim().length() == 0) {
+            goToActivity("Error: Empty Input Value");
+            return;
+        }
+
         int num1 = Integer.valueOf(String.valueOf(editNum1.getText()));
         int num2 = Integer.valueOf(String.valueOf(editNum2.getText()));
 
@@ -53,6 +67,11 @@ public class MainActivity extends AppCompatActivity {
     public void divide(View view){
         EditText editNum1 = (EditText) findViewById(R.id.editNum1);
         EditText editNum2 = (EditText) findViewById(R.id.editNum2);
+
+        if (editNum1.getText().toString().trim().length() == 0 || editNum2.getText().toString().trim().length() == 0) {
+            goToActivity("Error: Empty Input Value");
+            return;
+        }
 
         int num1 = Integer.valueOf(String.valueOf(editNum1.getText()));
         int num2 = Integer.valueOf(String.valueOf(editNum2.getText()));
